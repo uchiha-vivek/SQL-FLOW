@@ -106,3 +106,35 @@ INSERT INTO customer
 SELECT * FROM customer
 ORDER BY Name ASC
 LIMIT 5;
+
+
+
+
+
+
+
+
+
+SELECT SUM(Salary) FROM customer;
+
+SELECT COUNT(Salary) FROM customer;
+
+SELECT MAX(Salary) FROM customer;
+
+SELECT MIN(Salary) FROM customer;
+
+SELECT AVG(Salary) FROM customer;
+
+SELECT ROUND(AVG(Salary),2) FROM customer;
+
+SELECT ID,SUM(Salary) AS Total
+FROM customer
+GROUP BY ID;
+
+SELECT * FROM customer;
+
+SELECT City , COUNT(Salary)
+FROM customer
+GROUP BY City
+HAVING COUNT(Salary) >=1
+ORDER BY City DESC;
